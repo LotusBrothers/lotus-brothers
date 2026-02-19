@@ -6,6 +6,7 @@ import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import FooterSection from "@/components/home/FooterSection";
+import ProjectModal from "@/components/projects/ProjectModal";
 
 const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69968e273c35546c21525210/b8bc91192_transparentlogo.png";
 
