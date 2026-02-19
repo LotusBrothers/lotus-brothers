@@ -1,114 +1,148 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_69856e2bed8858906fe3acb2/0e454fe17_LotusBlue0F1E2E.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0F1E2E]">
-      {/* Background image with overlay */}
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-[#080E16]">
+
+      {/* Full-bleed background image — high-end architectural photo */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=2000&q=90"
           alt="Modern architecture"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 40%" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0F1E2E]/60 via-[#0F1E2E]/40 to-[#0F1E2E]" />
+        {/* Multi-layer gradient for depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080E16]/95 via-[#080E16]/60 to-[#080E16]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080E16] via-transparent to-[#080E16]/30" />
+        {/* Warm vignette */}
+        <div className="absolute inset-0" style={{background: "radial-gradient(ellipse at 70% 50%, transparent 30%, rgba(8,14,22,0.7) 100%)"}} />
       </div>
 
-      {/* Subtle grid pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
-        }}
-      />
+      {/* Thin horizontal accent lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C4A97D]/30 to-transparent" />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <img 
-            src={LOGO_URL} 
-            alt="Lotus Brothers" 
-            className="w-20 h-20 mx-auto mb-10 rounded-xl object-cover"
-          />
-        </motion.div>
-
+      {/* Navbar area */}
+      <div className="relative z-20 flex items-center justify-between px-8 md:px-16 pt-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 0.3 }}
+          transition={{ duration: 1 }}
+          className="flex items-center gap-3"
         >
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px w-12 bg-[#C4A97D]/40" />
-            <span className="text-[#C4A97D] text-xs tracking-[0.35em] uppercase font-light">
+          <img src={LOGO_URL} alt="Lotus Brothers" className="w-9 h-9 object-cover" style={{filter: "brightness(0) invert(1)"}} />
+          <span className="text-white/80 text-sm tracking-[0.2em] uppercase font-light hidden sm:block">Lotus Brothers</span>
+        </motion.div>
+
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="hidden md:flex items-center gap-10"
+        >
+          {["Projects", "About", "Contact"].map(page => (
+            <a
+              key={page}
+              href={`#${page.toLowerCase()}`}
+              className="text-white/40 text-xs tracking-[0.25em] uppercase font-light hover:text-[#C4A97D] transition-colors duration-500"
+            >
+              {page}
+            </a>
+          ))}
+        </motion.nav>
+      </div>
+
+      {/* Main hero content — left-aligned for luxury editorial feel */}
+      <div className="relative z-10 flex-1 flex items-center px-8 md:px-16 lg:px-24">
+        <div className="max-w-3xl">
+
+          {/* Eyebrow label */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="flex items-center gap-4 mb-10"
+          >
+            <div className="w-8 h-px bg-[#C4A97D]" />
+            <span className="text-[#C4A97D] text-[10px] tracking-[0.45em] uppercase font-light">
               Real Estate Development
             </span>
-            <div className="h-px w-12 bg-[#C4A97D]/40" />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, delay: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white tracking-tight leading-[1.05]"
-        >
-          Lotus
-          <span className="block font-light text-[#C4A97D]">Brothers</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 0.9 }}
-          className="mt-8 text-white/50 text-lg md:text-xl font-extralight tracking-wide max-w-2xl mx-auto leading-relaxed"
-        >
-          Where mindful design meets modern living.
-          <br className="hidden md:block" />
-          Building spaces that breathe.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.3 }}
-          className="mt-14 flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <a 
-            href="#projects"
-            className="px-8 py-3.5 bg-[#C4A97D] text-[#0F1E2E] text-sm tracking-widest uppercase font-medium hover:bg-[#D4B98D] transition-all duration-500 rounded-none"
+          {/* Main headline — serif-feel through weight contrast */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            className="text-[clamp(3.5rem,9vw,8rem)] font-thin text-white leading-[0.95] tracking-[-0.02em]"
           >
-            Our Projects
-          </a>
-          <a 
-            href="#contact"
-            className="px-8 py-3.5 border border-white/20 text-white/70 text-sm tracking-widest uppercase font-light hover:border-[#C4A97D]/50 hover:text-[#C4A97D] transition-all duration-500 rounded-none"
+            Lotus
+            <br />
+            <span className="font-extralight" style={{ WebkitTextStroke: "1px rgba(196,169,125,0.6)", color: "transparent" }}>
+              Brothers
+            </span>
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 1 }}
+            className="mt-8 text-white/40 text-base md:text-lg font-extralight tracking-wide leading-relaxed max-w-md"
           >
-            Get in Touch
-          </a>
-        </motion.div>
+            Where stillness meets structure. We craft spaces of enduring beauty, rooted in intention.
+          </motion.p>
+
+          {/* CTA row */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.3 }}
+            className="mt-12 flex items-center gap-8"
+          >
+            <a
+              href="#projects"
+              className="group relative px-8 py-4 bg-[#C4A97D] text-[#080E16] text-xs tracking-[0.3em] uppercase font-medium overflow-hidden transition-all duration-500 hover:bg-[#D4B98D]"
+            >
+              Explore Projects
+            </a>
+            <a
+              href="#contact"
+              className="text-white/35 text-xs tracking-[0.3em] uppercase font-light hover:text-[#C4A97D] transition-colors duration-500 flex items-center gap-3"
+            >
+              <span>Get in Touch</span>
+              <svg width="20" height="1" viewBox="0 0 20 1" className="overflow-visible">
+                <line x1="0" y1="0.5" x2="20" y2="0.5" stroke="currentColor" strokeWidth="0.5" />
+              </svg>
+            </a>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Bottom bar with stats */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        transition={{ duration: 1, delay: 1.6 }}
+        className="relative z-10 border-t border-white/[0.06] grid grid-cols-3 divide-x divide-white/[0.06]"
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-5 h-5 text-white/30" />
-        </motion.div>
+        {[
+          { value: "48", label: "Projects" },
+          { value: "2.4M", label: "Sq Ft Built" },
+          { value: "12+", label: "Years" }
+        ].map(stat => (
+          <div key={stat.label} className="py-6 px-8 md:px-12 text-center">
+            <div className="text-white text-xl md:text-2xl font-extralight tracking-wide">{stat.value}</div>
+            <div className="text-white/25 text-[10px] tracking-[0.3em] uppercase mt-1">{stat.label}</div>
+          </div>
+        ))}
       </motion.div>
+
+      {/* Thin bottom accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C4A97D]/20 to-transparent" />
     </section>
   );
 }
