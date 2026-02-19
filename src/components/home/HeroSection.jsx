@@ -33,7 +33,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="flex items-center gap-3"
         >
-          <img src={LOGO_URL} alt="Lotus Brothers" className="w-9 h-9 object-cover" style={{filter: "brightness(0) invert(1)"}} />
+          <img src={LOGO_URL} alt="Lotus Brothers" className="w-10 h-10 object-contain" style={{filter: "brightness(0) invert(1)"}} />
           <span className="text-white/80 text-sm tracking-[0.2em] uppercase font-light hidden sm:block">Lotus Brothers</span>
         </motion.div>
 

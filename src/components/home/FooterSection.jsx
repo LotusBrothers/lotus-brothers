@@ -11,7 +11,7 @@ export default function FooterSection() {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src={LOGO_URL} alt="Lotus Brothers" className="w-8 h-8 rounded-md object-cover" />
+              <img src={LOGO_URL} alt="Lotus Brothers" className="w-8 h-8 object-contain" style={{filter: "brightness(0) invert(1) opacity(0.6)"}} />
               <span className="text-white font-light tracking-wider text-lg">Lotus Brothers</span>
             </div>
             <p className="text-white/30 text-sm font-light leading-relaxed max-w-sm">
