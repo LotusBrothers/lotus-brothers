@@ -167,57 +167,7 @@ export default function Projects() {
       {/* Project detail modal */}
       <AnimatePresence>
         {selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-6"
-            onClick={() => setSelectedProject(null)}
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 40, scale: 0.95 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white max-w-3xl w-full max-h-[85vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative aspect-video">
-                <img
-                  src={selectedProject.image_url || "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1E2E]/60 to-transparent" />
-              </div>
-              <div className="p-8 md:p-12">
-                <span className="text-[#C4A97D] text-xs tracking-[0.25em] uppercase font-light">
-                  {selectedProject.category?.replace(/_/g, " ")}
-                </span>
-                <h2 className="mt-3 text-3xl font-extralight text-[#0F1E2E] tracking-tight">
-                  {selectedProject.title}
-                </h2>
-                <p className="mt-2 text-[#0F1E2E]/40 text-sm font-light">
-                  {selectedProject.location} {selectedProject.year && `· ${selectedProject.year}`}
-                </p>
-                <p className="mt-6 text-[#0F1E2E]/60 font-light leading-relaxed">
-                  {selectedProject.description}
-                </p>
-                {selectedProject.square_footage && (
-                  <div className="mt-8 pt-6 border-t border-[#0F1E2E]/10">
-                    <span className="text-[#0F1E2E]/35 text-xs tracking-widest uppercase font-light">Total Area</span>
-                    <p className="mt-1 text-2xl font-extralight text-[#0F1E2E]">{selectedProject.square_footage} <span className="text-sm text-[#0F1E2E]/40">sq ft</span></p>
-                  </div>
-                )}
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="mt-8 text-[#0F1E2E]/40 text-sm tracking-widest uppercase font-light hover:text-[#C4A97D] transition-colors"
-                >
-                  Close
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
+          <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
         )}
       </AnimatePresence>
 
