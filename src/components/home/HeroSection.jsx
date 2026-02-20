@@ -187,7 +187,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Slide Controls ── */}
-      <div className="absolute bottom-24 left-8 md:left-16 z-20 flex items-center gap-4">
+      <div className="absolute bottom-24 left-5 md:left-16 z-20 flex items-center gap-4">
         {SLIDES.map((s, i) =>
         <button
           key={i}
