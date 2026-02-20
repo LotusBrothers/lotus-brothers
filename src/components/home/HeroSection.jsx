@@ -10,26 +10,26 @@ const SLIDES = [
 {
   image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=2400&q=90",
   position: "center 40%",
-  label: "The Meridian · Austin, TX",
+  label: "The Meridian · Dallas, TX",
   tag: "Luxury Residences"
 },
 {
   image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=2400&q=90",
   position: "center 30%",
-  label: "Cedar Park Villas · Austin, TX",
+  label: "Lotus Villas · Dallas, TX",
   tag: "Private Estates"
 },
 {
   image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=2400&q=90",
   position: "center 50%",
-  label: "Harmony Residences · Portland, OR",
-  tag: "Urban Living"
+  label: "Biscayne Residences · Miami, FL",
+  tag: "Coastal Living"
 },
 {
   image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2400&q=90",
   position: "center 35%",
-  label: "Oasis Estate · Scottsdale, AZ",
-  tag: "Desert Sanctuary"
+  label: "The Palms Estate · Miami, FL",
+  tag: "Waterfront Sanctuary"
 }];
 
 
