@@ -102,7 +102,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {displayProjects.map((project, index) => (
             <motion.div
               key={project.id}
