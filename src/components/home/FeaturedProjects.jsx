@@ -63,7 +63,7 @@ export default function FeaturedProjects() {
   const displayProjects = projects.length > 0 ? projects : fallbackProjects;
 
   return (
-    <section className="bg-[#FAFAF8] py-32 px-8 md:px-16">
+    <section className="bg-[#FAFAF8] py-16 md:py-32 px-5 md:px-16">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
