@@ -8,28 +8,28 @@ const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/pub
 
 const SLIDES = [
 {
-  image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=2400&q=90",
-  position: "center 40%",
-  label: "The Meridian · Dallas, TX",
-  tag: "Luxury Residences"
-},
-{
-  image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=2400&q=90",
-  position: "center 30%",
-  label: "Lotus Villas · Dallas, TX",
-  tag: "Private Estates"
-},
-{
-  image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=2400&q=90",
+  image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=2400&q=90",
   position: "center 50%",
-  label: "Biscayne Residences · Miami, FL",
-  tag: "Coastal Living"
+  label: "The Meridian · Dallas, TX",
+  tag: "Biophilic Living"
 },
 {
-  image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2400&q=90",
-  position: "center 35%",
+  image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=2400&q=90",
+  position: "center 40%",
+  label: "Lotus Villas · Dallas, TX",
+  tag: "Zen Wellness Homes"
+},
+{
+  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90",
+  position: "center 45%",
+  label: "Biscayne Residences · Miami, FL",
+  tag: "Nature-Integrated Design"
+},
+{
+  image: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=2400&q=90",
+  position: "center 40%",
   label: "The Palms Estate · Miami, FL",
-  tag: "Waterfront Sanctuary"
+  tag: "Living Architecture"
 }];
 
 
