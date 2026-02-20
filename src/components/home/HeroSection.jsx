@@ -187,7 +187,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Slide Controls ── */}
-      <div className="absolute bottom-24 left-5 md:left-16 z-20 flex items-center gap-4">
+      <div className="px-8 absolute bottom-24 left-5 md:left-16 z-20 flex items-center gap-4">
         {SLIDES.map((s, i) =>
         <button
           key={i}
@@ -228,9 +228,9 @@ export default function HeroSection() {
         { value: "2.4M", label: "Sq Ft Built" },
         { value: "12 Yrs", label: "Of Excellence" }].
         map((stat) =>
-        <div key={stat.label} className="py-5 px-8 md:px-14 text-center">
+        <div key={stat.label} className="px-8 py-4 text-center md:px-14">
             <div className="text-white text-xl md:text-2xl font-extralight tracking-wide">{stat.value}</div>
-            <div className="text-white/22 text-[9px] tracking-[0.32em] uppercase mt-1 font-light">{stat.label}</div>
+            <div className="text-gray-50 mt-1 font-light uppercase tracking-[0.32em]">{stat.label}</div>
           </div>
         )}
       </motion.div>
