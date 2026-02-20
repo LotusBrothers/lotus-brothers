@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export default function ContactSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", inquiry_type: "general" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "", inquiry_type: "general" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
