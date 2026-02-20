@@ -159,7 +159,7 @@ export default function HeroSection() {
             transition={{ duration: 1.2, delay: 0.7 }} className="text-slate-50 mt-8 text-base font-extralight tracking-wide leading-relaxed md:text-lg max-w-md">
 
 
-            Luxury residential developments crafted for those who appreciate beauty, silence, and space.
+            Biophilic homes designed for deep rest, natural light, and a life lived in harmony with the earth.
           </motion.p>
 
           {/* CTAs */}
