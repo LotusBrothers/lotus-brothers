@@ -255,13 +255,26 @@ export default function FeaturedProjects() {
                   {/* ROI Bar */}
                   <ROIBar current={project.roi} target={project.target_roi} pct={project.raise_pct} />
 
-                  {/* CTA */}
-                  <Link
-                    to={createPageUrl("Projects")}
-                    className="mt-5 flex items-center justify-center gap-2 border border-[#0F1E2E]/12 text-[#0F1E2E]/40 text-[10px] tracking-[0.28em] uppercase font-light py-3 hover:border-[#C4A97D] hover:text-[#C4A97D] transition-all duration-300"
-                  >
-                    View Opportunity <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  {/* CTAs */}
+                  <div className="mt-5 flex gap-2">
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      disabled={project.status === "completed"}
+                      className={`flex-1 flex items-center justify-center gap-2 text-[10px] tracking-[0.25em] uppercase font-medium py-3 transition-all duration-300 ${
+                        project.status !== "completed"
+                          ? "bg-[#0F1E2E] text-white hover:bg-[#1a2e42]"
+                          : "border border-[#0F1E2E]/10 text-[#0F1E2E]/25 cursor-not-allowed"
+                      }`}
+                    >
+                      {project.status === "completed" ? "Fully Funded" : "Invest with Crypto"}
+                    </button>
+                    <Link
+                      to={createPageUrl("Projects")}
+                      className="flex items-center justify-center border border-[#0F1E2E]/12 text-[#0F1E2E]/40 px-4 hover:border-[#C4A97D] hover:text-[#C4A97D] transition-all duration-300"
+                    >
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             );
