@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Wallet, ChevronDown, LogOut } from "lucide-react";
-import { connectWallet, getWalletAddress, getEthBalance } from "@/components/invest/cryptoUtils";
+import { connectWallet, getWalletAddress, getEthBalance } from "./cryptoUtils";
 
 export default function WalletButton({ onConnected }) {
   const [address, setAddress] = useState(null);
