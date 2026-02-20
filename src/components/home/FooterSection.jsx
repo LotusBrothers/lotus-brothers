@@ -21,7 +21,7 @@ export default function FooterSection() {
           <div>
             <h4 className="text-white/30 text-[10px] tracking-[0.3em] uppercase font-light mb-6">Navigate</h4>
             <div className="space-y-3.5">
-              {[["Home", "Home"], ["Projects", "Projects"], ["About", "About"], ["Contact", "Contact"]].map(([label, page]) =>
+              {[["Home", "Home"], ["Projects", "Projects"], ["Invest", "Invest"], ["About", "About"], ["Contact", "Contact"]].map(([label, page]) =>
               <Link key={page} to={createPageUrl(page)} className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">
                   {label}
                 </Link>

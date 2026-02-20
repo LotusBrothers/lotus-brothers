@@ -33,7 +33,7 @@ const SLIDES = [
 }];
 
 
-const NAV_LINKS = ["Projects", "About", "Contact"];
+const NAV_LINKS = ["Projects", "Invest", "About", "Contact"];
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
