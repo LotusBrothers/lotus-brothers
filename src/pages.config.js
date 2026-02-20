@@ -51,6 +51,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Invest from './pages/Invest';
 
 
 export const PAGES = {
@@ -58,6 +59,7 @@ export const PAGES = {
     "Contact": Contact,
     "Home": Home,
     "Projects": Projects,
+    "Invest": Invest,
 }
 
 export const pagesConfig = {
