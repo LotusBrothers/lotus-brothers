@@ -6,59 +6,39 @@ const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/pub
 
 export default function FooterSection() {
   return (
-    <footer className="bg-[#0F1E2E] border-t border-white/5 py-16 px-6">
+    <footer className="bg-[#0F1E2E] py-16 px-8 md:px-16">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-4 gap-12 pb-12 border-b border-white/8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <img src={LOGO_URL} alt="Lotus Brothers" className="w-8 h-8 object-contain" style={{filter: "brightness(0) invert(1) opacity(0.6)"}} />
-              <span className="text-white font-light tracking-wider text-lg">Lotus Brothers</span>
+            <div className="flex items-center gap-3 mb-5">
+              <img src={LOGO_URL} alt="Lotus Brothers" className="w-7 h-7 object-contain" style={{ filter: "brightness(0) invert(1) opacity(0.5)" }} />
+              <span className="text-white/50 text-sm font-light tracking-[0.18em] uppercase">Lotus Brothers</span>
             </div>
-            <p className="text-white/30 text-sm font-light leading-relaxed max-w-sm">
-              Creating mindful spaces that balance architectural beauty with sustainable innovation. Based in Austin, building nationwide.
+            <p className="text-white/25 text-sm font-light leading-relaxed max-w-xs">
+              Residential development focused on quality, community, and enduring design. Based in Austin, TX.
             </p>
           </div>
-
           <div>
-            <h4 className="text-white/50 text-xs tracking-[0.2em] uppercase mb-6">Navigate</h4>
-            <div className="space-y-3">
-              {[
-                { label: "Home", page: "Home" },
-                { label: "Projects", page: "Projects" },
-                { label: "About", page: "About" },
-                { label: "Contact", page: "Contact" }
-              ].map(link => (
-                <Link
-                  key={link.page}
-                  to={createPageUrl(link.page)}
-                  className="block text-white/30 text-sm font-light hover:text-[#C4A97D] transition-colors duration-500"
-                >
-                  {link.label}
+            <h4 className="text-white/30 text-[10px] tracking-[0.3em] uppercase font-light mb-6">Navigate</h4>
+            <div className="space-y-3.5">
+              {[["Home", "Home"], ["Projects", "Projects"], ["About", "About"], ["Contact", "Contact"]].map(([label, page]) => (
+                <Link key={page} to={createPageUrl(page)} className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">
+                  {label}
                 </Link>
               ))}
             </div>
           </div>
-
           <div>
-            <h4 className="text-white/50 text-xs tracking-[0.2em] uppercase mb-6">Connect</h4>
-            <div className="space-y-3">
-              {["LinkedIn", "Instagram", "Twitter"].map(social => (
-                <a
-                  key={social}
-                  href="#"
-                  className="block text-white/30 text-sm font-light hover:text-[#C4A97D] transition-colors duration-500"
-                >
-                  {social}
-                </a>
+            <h4 className="text-white/30 text-[10px] tracking-[0.3em] uppercase font-light mb-6">Follow</h4>
+            <div className="space-y-3.5">
+              {["LinkedIn", "Instagram", "Twitter"].map(s => (
+                <a key={s} href="#" className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">{s}</a>
               ))}
             </div>
           </div>
         </div>
-
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/20 text-xs font-light tracking-wider">
-            © 2026 Lotus Brothers. All rights reserved.
-          </p>
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/20 text-xs font-light tracking-wider">© 2026 Lotus Brothers. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="text-white/20 text-xs font-light hover:text-white/40 transition-colors">Privacy</a>
             <a href="#" className="text-white/20 text-xs font-light hover:text-white/40 transition-colors">Terms</a>
