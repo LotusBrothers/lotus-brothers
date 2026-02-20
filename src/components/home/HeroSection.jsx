@@ -146,10 +146,10 @@ export default function HeroSection() {
               className="font-extralight italic"
               style={{ WebkitTextStroke: "1px rgba(196,169,125,0.55)", color: "transparent" }}>
 
-              Excellence
+              Nature
             </span>
             <br />
-            <span className="font-thin">Blooms.</span>
+            <span className="font-thin">Dwells.</span>
           </motion.h1>
 
           {/* Sub */}
