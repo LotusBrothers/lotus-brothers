@@ -8,28 +8,28 @@ const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/pub
 
 const SLIDES = [
 {
-  image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=2400&q=90",
-  position: "center 50%",
+  image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2400&q=90",
+  position: "center 55%",
   label: "The Meridian · Dallas, TX",
   tag: "Biophilic Living"
 },
 {
-  image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=2400&q=90",
-  position: "center 40%",
+  image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=2400&q=90",
+  position: "center 50%",
   label: "Lotus Villas · Dallas, TX",
   tag: "Zen Wellness Homes"
 },
 {
-  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90",
-  position: "center 45%",
+  image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=2400&q=90",
+  position: "center 40%",
   label: "Biscayne Residences · Miami, FL",
   tag: "Nature-Integrated Design"
 },
 {
-  image: "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=2400&q=90",
-  position: "center 40%",
+  image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=2400&q=90",
+  position: "center 45%",
   label: "The Palms Estate · Miami, FL",
-  tag: "Living Architecture"
+  tag: "Holistic Living"
 }];
 
 
