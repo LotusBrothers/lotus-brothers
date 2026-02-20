@@ -149,7 +149,7 @@ export default function HeroSection() {
               stillness
             </span>
             <br />
-            <span className="font-thin">meets home.</span>
+            <span className="font-thin">Meets Home.</span>
           </motion.h1>
 
           {/* Sub */}
