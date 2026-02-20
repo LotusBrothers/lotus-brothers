@@ -115,7 +115,7 @@ export default function FeaturedProjects() {
               className="group flex flex-col"
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-[3/4]">
+              <div className="relative overflow-hidden aspect-[4/3] md:aspect-[3/4]">
                 <motion.img
                   src={project.image_url || "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=85"}
                   alt={project.title}
