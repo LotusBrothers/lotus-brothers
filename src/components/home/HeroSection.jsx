@@ -221,7 +221,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/[0.07] grid grid-cols-3 divide-x divide-white/[0.07]">
+        className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/[0.07] grid grid-cols-3 divide-x divide-white/[0.07] hidden sm:grid">
 
         {[
         { value: "48+", label: "Homes Delivered" },
