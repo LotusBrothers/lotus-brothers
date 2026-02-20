@@ -80,6 +80,9 @@ export default function ContactSection() {
                     <Input type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} required placeholder="jane@example.com" className={inputCls} />
                   </Field>
                 </div>
+                <Field label="Subject">
+                  <Input value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })} placeholder="How can we help?" className={inputCls} />
+                </Field>
                 <div className="grid sm:grid-cols-2 gap-7">
                   <Field label="Phone">
                     <Input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+1 (555) 000-0000" className={inputCls} />
