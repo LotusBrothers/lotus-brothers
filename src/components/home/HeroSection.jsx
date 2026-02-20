@@ -139,7 +139,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[clamp(3.5rem,8vw,7.5rem)] font-thin text-white leading-[0.95] tracking-[-0.025em]">
+            className="text-[clamp(2.6rem,7vw,7.5rem)] font-thin text-white leading-[0.95] tracking-[-0.025em]">
 
             Where<br />
             <span
