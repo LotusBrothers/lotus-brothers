@@ -116,7 +116,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Hero Content ── */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-center px-8 md:px-16 lg:px-24">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center px-6 md:px-16 lg:px-24">
         <div className="max-w-3xl">
 
           {/* Eyebrow */}
