@@ -14,26 +14,26 @@ export default function FooterSection() {
               <img src={LOGO_URL} alt="Lotus Brothers" className="w-7 h-7 object-contain" style={{ filter: "brightness(0) invert(1) opacity(0.5)" }} />
               <span className="text-white/50 text-sm font-light tracking-[0.18em] uppercase">Lotus Brothers</span>
             </div>
-            <p className="text-white/25 text-sm font-light leading-relaxed max-w-xs">
-              Residential development focused on quality, community, and enduring design. Based in Austin, TX.
+            <p className="text-white/25 text-sm font-light leading-relaxed max-w-xs">Residential Development Focused On Quality, Community, and Enduring Design. Based in Dallas, TX.
+
             </p>
           </div>
           <div>
             <h4 className="text-white/30 text-[10px] tracking-[0.3em] uppercase font-light mb-6">Navigate</h4>
             <div className="space-y-3.5">
-              {[["Home", "Home"], ["Projects", "Projects"], ["About", "About"], ["Contact", "Contact"]].map(([label, page]) => (
-                <Link key={page} to={createPageUrl(page)} className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">
+              {[["Home", "Home"], ["Projects", "Projects"], ["About", "About"], ["Contact", "Contact"]].map(([label, page]) =>
+              <Link key={page} to={createPageUrl(page)} className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">
                   {label}
                 </Link>
-              ))}
+              )}
             </div>
           </div>
           <div>
             <h4 className="text-white/30 text-[10px] tracking-[0.3em] uppercase font-light mb-6">Follow</h4>
             <div className="space-y-3.5">
-              {["LinkedIn", "Instagram", "Twitter"].map(s => (
-                <a key={s} href="#" className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">{s}</a>
-              ))}
+              {["LinkedIn", "Instagram", "Twitter"].map((s) =>
+              <a key={s} href="#" className="block text-white/30 text-sm font-light hover:text-white/60 transition-colors">{s}</a>
+              )}
             </div>
           </div>
         </div>
@@ -45,6 +45,6 @@ export default function FooterSection() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
