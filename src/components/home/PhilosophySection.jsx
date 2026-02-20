@@ -1,69 +1,71 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const values = [
+const pillars = [
   {
     number: "01",
-    title: "Mindful Design",
-    description: "Every space we create begins with intention. We design environments that nurture well-being and elevate the human experience."
+    title: "Thoughtful Design",
+    description: "Every home begins with a deep understanding of how people actually live — light, flow, and space considered from the first sketch.",
   },
   {
     number: "02",
-    title: "Sustainable Vision",
-    description: "We build for the future — integrating green technology, natural materials, and energy-conscious systems into every project."
+    title: "Quality Materials",
+    description: "We source enduring materials that age gracefully. No shortcuts. Every finish, fixture, and surface is chosen with intention.",
   },
   {
     number: "03",
-    title: "Precision Craft",
-    description: "From concept to completion, we hold ourselves to the highest standards of quality, detail, and architectural integrity."
-  }
+    title: "Community First",
+    description: "Our developments integrate with their neighbourhoods — respecting context, adding value, and building communities that last.",
+  },
 ];
 
 export default function PhilosophySection() {
   return (
-    <section className="bg-[#FAFAF8] py-32 px-6">
+    <section className="bg-white py-28 px-8 md:px-16 border-t border-black/5">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
-        >
-          <span className="text-[#C4A97D] text-xs tracking-[0.3em] uppercase font-light">
-            Our Philosophy
-          </span>
-          <h2 className="mt-6 text-3xl md:text-5xl font-extralight text-[#0F1E2E] tracking-tight">
-            Building with <span className="italic font-light">purpose</span>
-          </h2>
-          <p className="mt-6 text-[#0F1E2E]/50 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-            We believe great spaces are born from the harmony of aesthetics, function, and sustainability.
-          </p>
-        </motion.div>
+        {/* Header */}
+        <div className="grid md:grid-cols-2 gap-16 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-6 h-px bg-[#C4A97D]" />
+              <span className="text-[#C4A97D] text-[10px] tracking-[0.4em] uppercase font-light">Our Approach</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-thin text-[#0F1E2E] leading-tight tracking-tight">
+              Built with<br /><span className="italic font-extralight">purpose.</span>
+            </h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="flex items-end"
+          >
+            <p className="text-[#0F1E2E]/45 font-light leading-relaxed text-lg">
+              Lotus Brothers was founded on the belief that residential development should enrich lives — not just provide shelter.
+            </p>
+          </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-0 md:gap-0">
-          {values.map((value, index) => (
+        {/* Pillars */}
+        <div className="grid md:grid-cols-3 gap-0 border-t border-black/8">
+          {pillars.map((p, i) => (
             <motion.div
-              key={value.number}
-              initial={{ opacity: 0, y: 30 }}
+              key={p.number}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="relative p-10 md:p-12 group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.12 }}
+              className="py-10 pr-12 border-b md:border-b-0 md:border-r border-black/8 last:border-r-0 group"
             >
-              {index < values.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-12 bottom-12 w-px bg-[#0F1E2E]/10" />
-              )}
-              <span className="text-[#C4A97D]/60 text-sm tracking-widest font-light">
-                {value.number}
-              </span>
-              <h3 className="mt-4 text-xl font-light text-[#0F1E2E] tracking-wide">
-                {value.title}
-              </h3>
-              <p className="mt-4 text-[#0F1E2E]/45 font-light leading-relaxed text-sm">
-                {value.description}
-              </p>
-              <div className="mt-6 h-px w-8 bg-[#C4A97D]/30 group-hover:w-16 transition-all duration-700" />
+              <span className="text-[#C4A97D] text-xs font-light tracking-[0.3em]">{p.number}</span>
+              <h3 className="mt-4 text-xl font-light text-[#0F1E2E] tracking-tight">{p.title}</h3>
+              <p className="mt-4 text-[#0F1E2E]/40 font-light text-sm leading-relaxed">{p.description}</p>
             </motion.div>
           ))}
         </div>
