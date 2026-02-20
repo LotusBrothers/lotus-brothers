@@ -40,8 +40,8 @@ export default function FooterSection() {
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/20 text-xs font-light tracking-wider">© 2026 Lotus Brothers. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="#" className="text-white/20 text-xs font-light hover:text-white/40 transition-colors">Privacy</a>
-            <a href="#" className="text-white/20 text-xs font-light hover:text-white/40 transition-colors">Terms</a>
+            
+            
           </div>
         </div>
       </div>
