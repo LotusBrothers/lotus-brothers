@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, MapPin, TrendingUp, DollarSign, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import InvestModal from "@/components/invest/InvestModal";
 
 const PORTFOLIO_STATS = [
   { value: "$48.2M", label: "Total Capital Raised", icon: DollarSign },
