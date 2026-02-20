@@ -281,6 +281,13 @@ export default function FeaturedProjects() {
           })}
         </div>
 
+        {/* Invest Modal */}
+        <AnimatePresence>
+          {selectedProject && (
+            <InvestModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+          )}
+        </AnimatePresence>
+
         {/* Disclaimer */}
         <motion.p
           initial={{ opacity: 0 }}
