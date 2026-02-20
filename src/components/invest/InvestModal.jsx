@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Wallet, TrendingUp, DollarSign, ArrowRight, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { connectWallet, getWalletAddress, getEthBalance, sendInvestment, usdToEth, ethToUsd, ETH_PRICE_USD } from "@/lib/cryptoInvest";
+import { connectWallet, getWalletAddress, getEthBalance, sendInvestment, usdToEth, ethToUsd, ETH_PRICE_USD } from "@/components/invest/cryptoUtils";
 
 // Demo escrow address — in production this would be your smart contract
 const ESCROW_ADDRESS = "0x742d35Cc6634C0532925a3b8D4C9E4F3b3c75d8e";
