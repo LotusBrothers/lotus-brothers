@@ -116,6 +116,7 @@ function ROIBar({ current, target, pct }) {
 
 export default function FeaturedProjects() {
   const [hovered, setHovered] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section className="bg-[#FAFAF8] py-16 md:py-32 px-5 md:px-16">
