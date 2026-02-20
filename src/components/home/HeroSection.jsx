@@ -90,7 +90,7 @@ export default function HeroSection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C4A97D]/30 to-transparent" />
 
       {/* ── Navigation ── */}
-      <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 md:px-16 py-8">
+      <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-5 md:px-16 py-6 md:py-8">
         <Link to={createPageUrl("Home")} className="flex items-center gap-3">
           <img src={LOGO_URL} alt="Lotus Brothers" className="w-9 h-9 object-contain" style={{ filter: "brightness(0) invert(1)" }} />
           <span className="text-white/70 text-sm font-light tracking-[0.22em] uppercase hidden sm:block">Lotus Brothers</span>
